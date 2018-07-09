@@ -33,8 +33,8 @@
 											</div>
 										</div>
 										<div align="center">
-											<div class="row"><div class="col-sm-12"><div class="form-group"><input type="email" name="booking_email" id="" class="form-control" placeholder="Enter Tracking Number"></div></div></div>
-											<button type="submit" class="sppb-btn sppb-btn-primary sppb-btn-square btn-booking" data-toggle="modal" data-target="#largemodal">TRACK NOW</button>
+											<div class="row"><div class="col-sm-12"><div class="form-group"><input type="email" name="booking_email" id="tracking_id" class="form-control" placeholder="Enter Tracking Number"></div></div></div>
+											<button type="button" class="sppb-btn sppb-btn-primary sppb-btn-square btn-booking" id="n3" data-toggle="modal" data-target="#track_modal" >TRACK NOW</button>
 										</div>
 									</div>
 								</div>

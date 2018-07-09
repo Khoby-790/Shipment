@@ -58,6 +58,7 @@
 	<script src="templates/itl_cargo/js/frontend-edit.js" type="text/javascript"></script>
 	<script src="media/system/js/html5fallback4f7d.js?512afca47f9ed77ab49b0d269e41320b" type="text/javascript"></script>
 	<script src="media/com_acymailing/js/acymailing_module7b69.js?v=596" type="text/javascript" async="async"></script>
+	
 	<script type="text/javascript">
 jQuery(function($){
 									$(window).load(function() {
@@ -248,8 +249,8 @@ var sp_offanimation = 'drarkplus';
 
 
 
-        <div class="modal fade" id="largemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
+        <div class="modal fade" id="track_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-md" role="document">
                 <div class="modal-content">
 
                     <div class="modal-body">
@@ -264,19 +265,19 @@ var sp_offanimation = 'drarkplus';
 	                   				<div class="col-md-12">
 	                   					<tr>
 	                   						<td><b>Track ID :</b></td>
-	                   						<td>87879424</td>
+	                   						<td id="track"></td>
 	                   					</tr>
 	                   					<tr>
 	                   						<td><b>Order Status :</b></td>
-	                   						<td>Order Stopped</td>
+	                   						<td id="status"> </td>
 	                   					</tr>
 	                   					<tr>
 	                   						<td><b>Origin :</b></td>
-	                   						<td>2018 Rockdell dr</td>
+	                   						<td id="origin">  </td>
 	                   					</tr>
 	                   					<tr>
 	                   						<td><b>Destination :</b></td>
-	                   						<td>2312 London Ave</td>
+	                   						<td id="destination"></td>
 	                   					</tr>
 	                   				</div>
 	                   			</table>
@@ -294,19 +295,19 @@ var sp_offanimation = 'drarkplus';
 	                   				<div class="col-md-12">
 	                   					<tr>
 	                   						<td><b>SHIPPED ON:</b></td>
-	                   						<td>2017/05/02</td>
+	                   						<td id="shipped_on"></td>
 	                   					</tr>
 	                   					<tr>
 	                   						<td><b>TYPE :</b></td>
-	                   						<td>Air</td>
+	                   						<td id="type"></td>
 	                   					</tr>
 	                   					<tr>
 	                   						<td><b>WEIGHT :</b></td>
-	                   						<td>89kg</td>
+	                   						<td id="weight"></td>
 	                   					</tr>
 	                   					<tr>
 	                   						<td><b>INVOICE :</b></td>
-	                   						<td>4451452</td>
+	                   						<td id="invoice"></td>
 	                   					</tr>
 	                   				</div>
 	                   			</table>
@@ -315,19 +316,19 @@ var sp_offanimation = 'drarkplus';
 
 
 
-                   		<div class="panel panel-info">
+                   		<div class="panel panel-warning">
                    			<div class="panel-heading">
                    				SHIPMENT IN PROGRESS
                    			</div>
                    			<div class="panel-body">
                    				<table class="table table-responsive">
 	                   				<thead>
-	                   					<tr>
+
 	                   						<td>Location</td>
 	                   						<td>Date</td>
 	                   						<td>Local Time</td>
 	                   						<td>Activity</td>
-	                   					</tr>
+
 	                   				</thead>
 	                   				<tbody>
 	                   					
@@ -349,7 +350,9 @@ var sp_offanimation = 'drarkplus';
                 </div>
             </div>
         </div>
-
-
+        <script type="text/javascript" src="{{ asset('js/jquery-3.2.1.js')}}"	></script>
+        <!-- <script type="text/javascript" src="{{ asset('js/bootstrap/.js') }}"></script> -->
+        <script src="{{ asset('js/server.js')}}" type="text/javascript"></script>
+       <!-- <script type="text/javascript" src="js/plugins.js"></script> -->
     </body>
 </html>

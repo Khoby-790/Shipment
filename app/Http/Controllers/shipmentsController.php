@@ -44,4 +44,12 @@ class shipmentsController extends Controller
 		return response()->json("Updated Successfully");
 	}
 
+
+
+	public function trackGoods($track_id){
+		$trackInfo = DB::table('shipments')->join('items','shipments.item_id','items.id')->join('receivers','shipments.receiver_id','receivers.id')->join('senders','shipments.sender_id','senders.id')->where('items.tracking_number',$track_id)->first();
+
+		return response()->json($trackInfo);
+	}
+
 }

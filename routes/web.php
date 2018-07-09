@@ -62,3 +62,5 @@ Route::post('storeShipment','shipmentsController@addShipment');
 
 
 Route::get('displayShipment','shipmentsController@viewShipmentList');
+
+Route::get('getTrackinfo/{id}','shipmentsController@trackGoods');
