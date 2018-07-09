@@ -1826,3 +1826,8 @@ body
 	justify-content: center;
 	padding: 10px;
 }
+
+.buttonTrack {
+	border-radius: 5px 5px 5px 5px;
+	width: 250px;
+}

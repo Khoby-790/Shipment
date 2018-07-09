@@ -250,71 +250,82 @@ var sp_offanimation = 'drarkplus';
 
 
         <div class="modal fade" id="track_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-md" role="document">
+            <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
 
                     <div class="modal-body">
                    
                    	<div class="panel-group">
+                   			<div class="panel panel-warning">
+                   				<div class="panel-heading">
+                   					Tracking Number : 
+                   				</div>
+                   				<div class="panel-body">
+                   					
+                   				</div>
+                   			</div>
+
                    		<div class="panel panel-warning">
                    			<div class="panel-heading">
                    				Tracking Details
                    			</div>
                    			<div class="panel-body">
-                   				<table class="table table-responsive">
-	                   				<div class="col-md-12">
-	                   					<tr>
-	                   						<td><b>Track ID :</b></td>
-	                   						<td id="track"></td>
-	                   					</tr>
-	                   					<tr>
-	                   						<td><b>Order Status :</b></td>
-	                   						<td id="status"> </td>
-	                   					</tr>
-	                   					<tr>
-	                   						<td><b>Origin :</b></td>
-	                   						<td id="origin">  </td>
-	                   					</tr>
-	                   					<tr>
-	                   						<td><b>Destination :</b></td>
-	                   						<td id="destination"></td>
-	                   					</tr>
-	                   				</div>
-	                   			</table>
+                   				<div class="row">
+                   					<div class="col-md-4">
+                   						<table class="table table-responsive">
+	                   						<div class="col-md-12">
+			                   					<tr>
+			                   						<td><b>Track ID :</b></td>
+			                   						<td id="track"></td>
+			                   					</tr>
+			                   					<tr>
+			                   						<td><b>Status :</b></td>
+			                   						<td id="status"> </td>
+			                   					</tr>
+			                   					<tr>
+			                   						<td><b>Origin :</b></td>
+			                   						<td id="origin">  </td>
+			                   					</tr>
+			                   					<tr>
+			                   						<td><b>Destination :</b></td>
+			                   						<td id="destination"></td>
+			                   					</tr>
+	                   						</div>
+	                   					</table>
+                   					</div>	
+                   					<div class="col-md-4">
+                   							<div class="container-fluid lo74">
+					                   			<div class="container">
+					                   				<button class="btn btn-primary buttonTrack">Track Again</button><br><br>
+					                   				<button class="btn btn-primary buttonTrack">Request Notification</button>
+					                   			</div>
+					                   		</div>
+                   					</div>	
+                   					<div class="col-md-4">
+                   						<table class="table table-responsive">
+	                   						<div class="col-md-12">
+			                   					<tr>
+			                   						<td><b>Track ID :</b></td>
+			                   						<td id="track"></td>
+			                   					</tr>
+			                   					<tr>
+			                   						<td><b>Order Status :</b></td>
+			                   						<td id="status"> </td>
+			                   					</tr>
+			                   					<tr>
+			                   						<td><b>Origin :</b></td>
+			                   						<td id="origin">  </td>
+			                   					</tr>
+			                   					<tr>
+			                   						<td><b>Destination :</b></td>
+			                   						<td id="destination"></td>
+			                   					</tr>
+	                   						</div>
+	                   					</table>
+                   					</div>	
+                   				</div>
                    			</div>
                    		</div>
-
-                   		
-
-                   		<div class="panel panel-warning">
-                   			<div class="panel-heading">
-                   				ADDITIONAL INFORMATION
-                   			</div>
-                   			<div class="panel-body">
-                   				<table class="table table-responsive">
-	                   				<div class="col-md-12">
-	                   					<tr>
-	                   						<td><b>SHIPPED ON:</b></td>
-	                   						<td id="shipped_on"></td>
-	                   					</tr>
-	                   					<tr>
-	                   						<td><b>TYPE :</b></td>
-	                   						<td id="type"></td>
-	                   					</tr>
-	                   					<tr>
-	                   						<td><b>WEIGHT :</b></td>
-	                   						<td id="weight"></td>
-	                   					</tr>
-	                   					<tr>
-	                   						<td><b>INVOICE :</b></td>
-	                   						<td id="invoice"></td>
-	                   					</tr>
-	                   				</div>
-	                   			</table>
-                   			</div>
-                   		</div>
-
-
 
                    		<div class="panel panel-warning">
                    			<div class="panel-heading">
@@ -337,12 +348,64 @@ var sp_offanimation = 'drarkplus';
                    			</div>
                    		</div>
 
-                   		<div class="container-fluid lo74">
-                   			<div class="container">
-                   				<button class="btn btn-primary">Track Again</button>
-                   				<button class="btn btn-primary">Request Notification</button>
+                   		<div class="panel panel-warning">
+                   			<div class="panel-heading">
+                   				ADDITIONAL INFORMATION
+                   			</div>
+                   			<div class="panel-body">
+                   				 <div class="row">
+                   				 	<div class="col-md-6">
+                   				 		<table class="table table-responsive">
+			                   				<div class="col-md-12">
+			                   					<tr>
+			                   						<td><b>SHIPPED ON:</b></td>
+			                   						<td id="shipped_on"></td>
+			                   					</tr>
+			                   					<tr>
+			                   						<td><b>TYPE :</b></td>
+			                   						<td id="type"></td>
+			                   					</tr>
+			                   					<tr>
+			                   						<td><b>WEIGHT :</b></td>
+			                   						<td id="weight"></td>
+			                   					</tr>
+			                   					<tr>
+			                   						<td><b>INVOICE :</b></td>
+			                   						<td id="invoice"></td>
+			                   					</tr>
+			                   				</div>
+			                   			</table>
+
+                   				 	</div>
+                   				 	<div class="col-md-6">
+                   				 		<table class="table table-responsive">
+			                   				<div class="col-md-12">
+			                   					<tr>
+			                   						<td><b>SHIPPED ON:</b></td>
+			                   						<td id="shipped_on"></td>
+			                   					</tr>
+			                   					<tr>
+			                   						<td><b>TYPE :</b></td>
+			                   						<td id="type"></td>
+			                   					</tr>
+			                   					<tr>
+			                   						<td><b>WEIGHT :</b></td>
+			                   						<td id="weight"></td>
+			                   					</tr>
+			                   					<tr>
+			                   						<td><b>INVOICE :</b></td>
+			                   						<td id="invoice"></td>
+			                   					</tr>
+			                   				</div>
+			                   			</table>
+
+                   				 	</div>
+                   				 </div>
+
                    			</div>
                    		</div>
+
+                   	
 
                    	</div>     
   				
