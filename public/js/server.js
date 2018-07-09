@@ -80,7 +80,7 @@ $(document).ready(function(){
 			dataType: "JSON",
 			success:function(data){
 				$('#track').text(data.tracking_number);
-
+				$('#head_tracking_number').text(data.tracking_number);
 				if(data.status == "Order Stopped"){
 					$('#status').text(data.status).css({
 						"color":"red",
@@ -97,6 +97,9 @@ $(document).ready(function(){
 				$('#type').text(data.shipment_mode);
 				$('#weight').text(data.weight);
 				$('#invoice').text(data.invoice);	
+				$('#origin').text(data.sender_address);	
+				$('#destination').text(data.receiver_address);	
+				//$('#invoice').text(data.invoice);	
 			},
 			error:function(){
 				alert("Error getting shipment");

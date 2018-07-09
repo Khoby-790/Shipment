@@ -258,11 +258,13 @@ var sp_offanimation = 'drarkplus';
                    	<div class="panel-group">
                    			<div class="panel panel-warning">
                    				<div class="panel-heading">
-                   					Tracking Number : 
+                   					Tracking Number : <span id="head_tracking_number"></span>
                    				</div>
                    				<div class="panel-body">
-                   					
-                   				</div>
+                   					<div class="progress " style="height: 55px;">
+	  									<div class="progress-bar bg-sucsess kil" role="progressbar" style="width: 75%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Transit</div>
+									</div>
+	                   				</div>
                    			</div>
 
                    		<div class="panel panel-warning">
@@ -271,13 +273,9 @@ var sp_offanimation = 'drarkplus';
                    			</div>
                    			<div class="panel-body">
                    				<div class="row">
-                   					<div class="col-md-4">
+                   					<div class="col-md-8">
                    						<table class="table table-responsive">
 	                   						<div class="col-md-12">
-			                   					<tr>
-			                   						<td><b>Track ID :</b></td>
-			                   						<td id="track"></td>
-			                   					</tr>
 			                   					<tr>
 			                   						<td><b>Status :</b></td>
 			                   						<td id="status"> </td>
@@ -301,7 +299,7 @@ var sp_offanimation = 'drarkplus';
 					                   			</div>
 					                   		</div>
                    					</div>	
-                   					<div class="col-md-4">
+                   					<div class="col-md-4 hidden-lg">
                    						<table class="table table-responsive">
 	                   						<div class="col-md-12">
 			                   					<tr>
