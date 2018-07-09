@@ -95,7 +95,7 @@ var sp_offanimation = 'drarkplus';
 
                     <div class="body-wrapper">
                         <div class="body-innerwrapper">
-                            <section id="sp-top-bar" class="topbar hidden-xs"><div class="container"><div class="row"><div id="sp-top1" class="col-sm-6 col-md-6"><div class="sp-column "><ul class="social-icons"><li><a target="_self" href="#"><i class="fa fa-facebook"></i></a></li><li><a target="_self" href="#"><i class="fa fa-twitter"></i></a></li><li><a target="_self" href="#"><i class="fa fa-pinterest"></i></a></li><li><a target="_self" href="#"><i class="fa fa-youtube"></i></a></li><li><a target="_self" href="#"><i class="fa fa-linkedin"></i></a></li></ul></div></div><div id="sp-top2" class="col-sm-6 col-md-6"><div class="sp-column "><ul class="sp-contact-info"><li class="sp-contact-email"><i class="fa fa-envelope"></i> <a href="mailto:mail@example.com">mail@example.com</a></li></ul></div></div></div></div></section>
+                            <section id="sp-top-bar" class="topbar hidden-xs"><div class="container"><div class="row"><div id="sp-top1" class="col-sm-6 col-md-6"><div class="sp-column "></div></div><div id="sp-top2" class="col-sm-6 col-md-6"><div class="sp-column "><ul class="sp-contact-info"><li class="sp-contact-email"><i class="fa fa-envelope"></i> <a href="mailto:mail@example.com">mail@example.com</a></li></ul></div></div></div></div></section>
 
 
 
@@ -139,8 +139,8 @@ var sp_offanimation = 'drarkplus';
 							</p>
 							<p>
 								<span class="major">
-									<strong>Cargo</strong>
-								</span> is a Transport / Shipping joomla Template built with Helix Framework &amp; SP Page Builder Pro.</p>
+									<strong>Diplomatic Security</strong>
+								</span>  is a diplomatic services, established to assist in handling and maintenance of secure and sensitive goods.</p>
 							<div class="custom">
 							<p>
 								<i class="lnr lnr-apartment"> </i>
@@ -205,7 +205,7 @@ var sp_offanimation = 'drarkplus';
 	<div class="acymailing_fulldiv" id="acymailing_fulldiv_formAcymailing87681"  >
 		<form id="formAcymailing87681" action="http://theshahriyar.com/joomla/cargo/index.php" onsubmit="return submitacymailingform('optin','formAcymailing87681')" method="post" name="formAcymailing87681"  >
 		<div class="acymailing_module_form" >
-			<div class="acymailing_introtext">Stay conncted with us on Social media and subscribe to our newslatter. </div>			<div class="acymailing_form">
+			<div class="acymailing_introtext">Stay connnect with our occasionaly updates on diplomatic privileged services. </div>			<div class="acymailing_form">
 					<p class="onefield fieldacyemail" id="field_email_formAcymailing87681">							<span class="acyfield_email acy_requiredField"><input id="user_email_formAcymailing87681"  onfocus="if(this.value == 'Subscribe Here') this.value = '';" onblur="if(this.value=='') this.value='Subscribe Here';" class="inputbox" type="text" name="user[email]" style="width:100%" value="Subscribe Here" title="Subscribe Here" /></span>
 							</p>
 					
@@ -228,13 +228,7 @@ var sp_offanimation = 'drarkplus';
 	</div>
 
 </div></div><div class="sp-module  footer-social"><div class="sp-module-content"><div class=" footer-social">
-    <ul class="topsocial">
-                <li><a href="#" target="_self"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#" target="_self"><i class="fa fa-twitter"></i></a></li>
-            	    	                <li><a href="#" target="_self"><i class="fa fa-pinterest"></i></a></li>
-                                        <li><a href="#" target="_self"><i class="fa fa-instagram"></i></a></li>
-                                        <li><a href="#" target="_self"><i class="fa fa-linkedin"></i></a></li>
-            	    </ul>
+    
 </div></div></div></div></div></div></div></section>                        </div> <!-- /.body-innerwrapper -->
                     </div> <!-- /.body-innerwrapper -->
 
