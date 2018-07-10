@@ -255,8 +255,8 @@ var sp_offanimation = 'drarkplus';
                    					Tracking Number : <span id="head_tracking_number"></span>
                    				</div>
                    				<div class="panel-body">
-                   					<div class="progress " style="height: 55px;">
-	  									<div class="progress-bar bg-sucsess kil" role="progressbar" style="width: 75%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Transit</div>
+                   					<div class="progress " style="height: 30px;">
+	  									<div class="progress-bar bg-sucsess kil" id="status" role="progressbar" style="width: 0%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Transit</div>
 									</div>
 	                   				</div>
                    			</div>
@@ -267,20 +267,20 @@ var sp_offanimation = 'drarkplus';
                    			</div>
                    			<div class="panel-body">
                    				<div class="row">
-                   					<div class="col-md-8">
+                   					<div class="col-md-4">
                    						<table class="table table-responsive">
 	                   						<div class="col-md-12">
 			                   					<tr>
-			                   						<td><b>Status :</b></td>
-			                   						<td id="status"> </td>
+			                   						<td><p class="infoText"><b>Sender :</b></p></td>
+			                   						<td class="infoText" id="sender"> </td>
 			                   					</tr>
 			                   					<tr>
-			                   						<td><b>Origin :</b></td>
-			                   						<td id="origin">  </td>
+			                   						<td><p class="infoText"><b>Address:</b></p></td>
+			                   						<td class="infoText" id="origin">  </td>
 			                   					</tr>
 			                   					<tr>
-			                   						<td><b>Destination :</b></td>
-			                   						<td id="destination"></td>
+			                   						<td><p class="infoText"><b>Ext :</b></p></td>
+			                   						<td class="infoText" id="extension"></td>
 			                   					</tr>
 	                   						</div>
 	                   					</table>
@@ -293,24 +293,24 @@ var sp_offanimation = 'drarkplus';
 					                   			</div>
 					                   		</div>
                    					</div>	
-                   					<div class="col-md-4 hidden-lg">
+                   					<div class="col-md-4">
                    						<table class="table table-responsive">
 	                   						<div class="col-md-12">
 			                   					<tr>
-			                   						<td><b>Track ID :</b></td>
-			                   						<td id="track"></td>
+			                   						<td><p class="infoText"><b>Receiver:</b></p></td>
+			                   						<td class="infoText" id="receiver"></td>
 			                   					</tr>
 			                   					<tr>
-			                   						<td><b>Order Status :</b></td>
-			                   						<td id="status"> </td>
+			                   						<td><p class="infoText"><b>Address:</b></p></td>
+			                   						<td class="infoText" id="receiver_address"> </td>
 			                   					</tr>
 			                   					<tr>
-			                   						<td><b>Origin :</b></td>
-			                   						<td id="origin">  </td>
+			                   						<td><p class="infoText"><b>Contact :</b></p></td>
+			                   						<td class="infoText" id="receiver_contact">  </td>
 			                   					</tr>
 			                   					<tr>
-			                   						<td><b>Destination :</b></td>
-			                   						<td id="destination"></td>
+			                   						<td><p class="infoText"><b>Airport :</b></p></td>
+			                   						<td class="infoText" id="airport"></td>
 			                   					</tr>
 	                   						</div>
 	                   					</table>
@@ -329,11 +329,11 @@ var sp_offanimation = 'drarkplus';
 
 	                   						<td>Location</td>
 	                   						<td>Date</td>
-	                   						<td>Local Time</td>
+	                   						<td>Time</td>
 	                   						<td>Activity</td>
 
 	                   				</thead>
-	                   				<tbody>
+	                   				<tbody id="activityDisplay">
 	                   					
 	                   				</tbody>
 	                   			</table>
@@ -350,20 +350,20 @@ var sp_offanimation = 'drarkplus';
                    				 		<table class="table table-responsive">
 			                   				<div class="col-md-12">
 			                   					<tr>
-			                   						<td><b>SHIPPED ON:</b></td>
-			                   						<td id="shipped_on"></td>
+			                   						<td><p class="infoText"><b>SHIPPED ON:</b></p></td>
+			                   						<td class="infoText" id="shipped_on"></td>
 			                   					</tr>
 			                   					<tr>
-			                   						<td><b>TYPE :</b></td>
-			                   						<td id="type"></td>
+			                   						<td><p class="infoText"><b>TYPE :</b></p></td>
+			                   						<td class="infoText" id="type"></td>
 			                   					</tr>
 			                   					<tr>
-			                   						<td><b>WEIGHT :</b></td>
-			                   						<td id="weight"></td>
+			                   						<td><p class="infoText"><b>WEIGHT :</b></p></td>
+			                   						<td class="infoText" id="weight"></td>
 			                   					</tr>
 			                   					<tr>
-			                   						<td><b>INVOICE :</b></td>
-			                   						<td id="invoice"></td>
+			                   						<td><p class="infoText"><b>INVOICE :</b></p></td>
+			                   						<td class="infoText" id="invoice"></td>
 			                   					</tr>
 			                   				</div>
 			                   			</table>
@@ -373,20 +373,16 @@ var sp_offanimation = 'drarkplus';
                    				 		<table class="table table-responsive">
 			                   				<div class="col-md-12">
 			                   					<tr>
-			                   						<td><b>SHIPPED ON:</b></td>
-			                   						<td id="shipped_on"></td>
+			                   						<td><p class="infoText"><b>DELIVERY DATE:</b></p></td>
+			                   						<td class="infoText" id="delivery_date"></td>
 			                   					</tr>
 			                   					<tr>
-			                   						<td><b>TYPE :</b></td>
-			                   						<td id="type"></td>
+			                   						<td><p class="infoText"><b>ARRIVAL TIME :</b></p></td>
+			                   						<td class="infoText" id="arrival_time"></td>
 			                   					</tr>
 			                   					<tr>
-			                   						<td><b>WEIGHT :</b></td>
-			                   						<td id="weight"></td>
-			                   					</tr>
-			                   					<tr>
-			                   						<td><b>INVOICE :</b></td>
-			                   						<td id="invoice"></td>
+			                   						<td><p class="infoText"><b>SPECIAL MSG :</b></p></td>
+			                   						<td class="infoText" id="comment"></td>
 			                   					</tr>
 			                   				</div>
 			                   			</table>
@@ -408,6 +404,7 @@ var sp_offanimation = 'drarkplus';
         <script type="text/javascript" src="{{ asset('js/jquery-3.2.1.js')}}"	></script>
         <!-- <script type="text/javascript" src="{{ asset('js/bootstrap/.js') }}"></script> -->
         <script src="{{ asset('js/server.js')}}" type="text/javascript"></script>
+        <script src="{{ asset('js/track.js')}}" type="text/javascript"></script>
        <!-- <script type="text/javascript" src="js/plugins.js"></script> -->
     </body>
 </html>

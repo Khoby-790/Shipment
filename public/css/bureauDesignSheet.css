@@ -1839,3 +1839,7 @@ body
 	border-radius: 5px 5px 5px 5px;
 	width: 250px;
 }
+
+.infoText{
+	font-size: 0.8em;
+}

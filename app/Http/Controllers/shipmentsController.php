@@ -9,6 +9,7 @@ use App\Item;
 use App\Shipment;
 use DB;
 use Carbon\Carbon;
+use App\Activity;
 
 class shipmentsController extends Controller
 {
@@ -25,8 +26,8 @@ class shipmentsController extends Controller
 	}
 
 	public function viewShipmentList(){
-		$shipments = DB::table('shipments')->join('items','shipments.item_id','items.id')->join('receivers','shipments.receiver_id','receivers.id')->join('senders','shipments.sender_id','senders.id')->get();
-		return response()->json($shipments);
+		$shipments = DB::table('shipments')->select('items.*','senders.*','receivers.*','shipments.*')->join('items','shipments.item_id','items.id')->join('receivers','shipments.receiver_id','receivers.id')->join('senders','shipments.sender_id','senders.id')->paginate(5);
+		return view('Dashboard/viewshipment',compact('shipments'));
 	}
 
 
@@ -47,9 +48,29 @@ class shipmentsController extends Controller
 
 
 	public function trackGoods($track_id){
-		$trackInfo = DB::table('shipments')->join('items','shipments.item_id','items.id')->join('receivers','shipments.receiver_id','receivers.id')->join('senders','shipments.sender_id','senders.id')->where('items.tracking_number',$track_id)->first();
+		$trackInfo = DB::table('shipments')->select('items.*','senders.*','receivers.*','shipments.*')->join('items','shipments.item_id','items.id')->join('receivers','shipments.receiver_id','receivers.id')->join('senders','shipments.sender_id','senders.id')->where('items.tracking_number',$track_id)->first();
 
 		return response()->json($trackInfo);
+	}
+
+	public function getShipmentActivity($shipment_id){
+		$trackActivities = Activity::where('shipment_id',$shipment_id)->get();
+
+		return response()->json($trackActivities);
+	}
+
+
+	public function getShipmentWIthId($shipment_id){
+		$singleShipment = DB::table('shipments')->join('items','shipments.item_id','items.id')->join('receivers','shipments.receiver_id','receivers.id')->join('senders','shipments.sender_id','senders.id')->where('shipments.id',$shipment_id)->first();
+
+		return response()->json($singleShipment);
+	}
+
+
+	public function addActivity(Request $req){
+		Activity::create($req->all());
+
+		return response()->json("Successful");
 	}
 
 }

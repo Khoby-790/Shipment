@@ -44,9 +44,7 @@ Route::get('addshipment', function () {
 
 
 
-Route::get('viewshipment', function () {
-    return view('Dashboard/viewshipment');
-})->name('viewshipment');
+Route::get('viewshipment','shipmentsController@viewShipmentList')->name('viewshipment');
 
 Route::get('addactivity', function () {
     return view('Dashboard/addactivity');
@@ -64,3 +62,8 @@ Route::post('storeShipment','shipmentsController@addShipment');
 Route::get('displayShipment','shipmentsController@viewShipmentList');
 
 Route::get('getTrackinfo/{id}','shipmentsController@trackGoods');
+Route::get('getShipmentActivities/{id}','shipmentsController@getShipmentActivity');
+Route::get('getShipmentWIthId/{id}','shipmentsController@getShipmentWIthId');
+Route::post('addShipmentActivity','shipmentsController@addActivity');
+
+

@@ -1,6 +1,7 @@
 $(document).ready(function(){
-
+	 $('#myTable').DataTable();
 	let pubData;
+	let current_width;
 
 	$('#AddButton').click(function(e){
 
@@ -33,7 +34,7 @@ $(document).ready(function(){
 
 	});
 
-	setTimeout(loadShipment,1000);
+	//setTimeout(loadShipment,1000);
 
 	function loadShipment(){
 		$.ajax({
@@ -61,7 +62,7 @@ $(document).ready(function(){
 				
 			},
 			error:()=>{
-				alert("hmmmmmm");
+				alert("Error");
 			}
 		});
 	}
@@ -69,47 +70,94 @@ $(document).ready(function(){
 
 
 
-	$('#n3').click(function(){
-		let track_id = $('#tracking_id').val();
+	
+
+
+	$('.actBtn').click(function(){
+		let a = $(this).attr('id').slice(3);
+		//alert(a);
+
 
 
 		$.ajax({
-			method:"GET",
-			url: `getTrackinfo/${track_id}`,
-			data: $("#addShipment").serialize(),
+			method: "GET",
+			url: `getShipmentWIthId/${a}`,
 			dataType: "JSON",
-			success:function(data){
-				$('#track').text(data.tracking_number);
-				$('#head_tracking_number').text(data.tracking_number);
-				if(data.status == "Order Stopped"){
-					$('#status').text(data.status).css({
-						"color":"red",
-						"fontWeight":"bold",
-					});
-				}else{
-					$('#status').text(data.status).css({
-						"color":"green",
-						"fontWeight":"bold",
-					});
-				}
-				
-				$('#shipped_on').text(data.created_at);
-				$('#type').text(data.shipment_mode);
-				$('#weight').text(data.weight);
-				$('#invoice').text(data.invoice);	
-				$('#origin').text(data.sender_address);	
-				$('#destination').text(data.receiver_address);	
-				//$('#invoice').text(data.invoice);	
+			success:(data)=>{
+				//alert(JSON.stringify(data));
+				$('#number_t').val(data.tracking_number);
+				$('#shipment_idw').val(a);
+				$('#activity_modal').modal();
 			},
-			error:function(){
-				alert("Error getting shipment");
+			error:(error)=>{
+				alert("Error");
 			}
+
 		});
+
+
+
 	});
 
-	$('#').click(()=>{
-		alert(this.attr('id'));
-	})
+
+
+	$('.viewBtn').click(function(){
+		const a = $(this).attr('id').slice(4);
+		//alert(a);
+
+		
+
+		$.ajax({
+			method: "GET",
+			url: `getShipmentWIthId/${a}`,
+			dataType: "JSON",
+			success:(data)=>{
+				//alert(JSON.stringify(data));
+				for(let key in data){
+					//alert(data[key]);
+					$(`input[name=${key}]`).val(data[key]) ;
+				}
+				$('#largemodal').modal();
+			},
+			error:(error)=>{
+				alert("Error");
+			}
+
+		});
+
+
+
+	});
+
+
+
+
+
+	$('#submitAddAct').click(function(){
+
+
+		$.ajaxSetup({
+			headers:{'X-CSRF-TOKEN':$('#csrf').attr("content")},
+		});
+
+
+		$.ajax({
+			method: "POST",
+			url: "addShipmentActivity",
+			data:$('#addActivityForm').serialize(),
+			dataType: "JSON",
+			success:(data)=>{
+				$('#addActivityForm').trigger('reset');
+				alert(data);
+			},
+			error:(error)=>{
+				alert("Error");
+			}
+
+		});
+
+
+	});
 
 
 });

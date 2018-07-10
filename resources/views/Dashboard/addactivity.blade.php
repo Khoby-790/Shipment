@@ -19,13 +19,13 @@
                                         <div class="col-md-5">
                                             <div class="form-group">
                                                 <label>Activity </label>
-                                                <input type="text" class="form-control" placeholder="Current activity" name="activity">
+                                                <input type="text" class="form-control" placeholder="Current activity" name="Activity">
                                             </div>
                                         </div>
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <label>Location</label>
-                                                <input type="text" name="Current_location" class="form-control" placeholder="Enter Current Location">
+                                                <input type="text" name="Location" class="form-control" placeholder="Enter Current Location">
                                             </div>
                                         </div>
                                         <div class="col-md-4">

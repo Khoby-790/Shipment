@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="css/extra.css">
 	<!-- f<link rel="stylesheet" href="css/bureauDesignSheet.css"> -->
 	<!-- EOF CSS INCLUDE -->
+	
 	</head>
 	<body>
 		<!-- PAGE WRAPPER -->
@@ -160,42 +161,42 @@
 
 <!-- Scripts  -->
 
- <script type="text/javascript" src="js/vendors/jquery/jquery.min.js"	></script>
-<script type="text/javascript" src="js/vendors/jquery/jquery-migrate.min.js">
+ <script type="text/javascript" src="{{ asset('js/vendors/jquery/jquery.min.js') }}"	></script>
+<script type="text/javascript" src="{{ asset('js/vendors/jquery/jquery-migrate.min.js') }}">
 	
 </script>
-<script type="text/javascript" src="js/vendors/bootstrap/bootstrap.bundle.min.js">
+<script type="text/javascript" src="{{ asset('js/vendors/bootstrap/bootstrap.bundle.min.js') }}">
 	
 </script>
 
-<script type="text/javascript" src="js/vendors/mcustomscrollbar/jquery.mCustomScrollbar.concat.min.js">
+<script type="text/javascript" src="{{ asset('js/vendors/mcustomscrollbar/jquery.mCustomScrollbar.concat.min.js') }}">
 	
 </script>
 <!-- END IMPORTANT SCRIPTS -->
 <!-- THIS PAGE SCRIPTS ONLY -->
-<script type="text/javascript" src="js/vendors/moment/moment-with-locales.min.js"></script>
-<script type="text/javascript" src="js/vendors/datatables/datatables.min.js"></script>
+<script type="text/javascript" src="{{ asset('js/vendors/moment/moment-with-locales.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/vendors/datatables/datatables.min.js')}}"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="js/vendors/daterangepicker/daterangepicker.js">
+<script type="text/javascript" src="{{ asset('js/vendors/daterangepicker/daterangepicker.js') }}">
 	
 </script>
-<script type="text/javascript" src="js/vendors/select2/select2.min.js">
+<script type="text/javascript" src="{{ asset('js/vendors/select2/select2.min.js') }}">
 </script>
-<script type="text/javascript" src="js/vendors/echarts/echarts.min.js">
+<script type="text/javascript" src="{{ asset('js/vendors/echarts/echarts.min.js') }}">
 </script>
-<script type="text/javascript" src="js/vendors/echarts/echarts-gl.min.js">
+<script type="text/javascript" src="{{ asset('js/vendors/echarts/echarts-gl.min.js') }}">
 </script>
 <!-- //END THIS PAGE SCRIPTS ONLY -->
 <!-- TEMPLATE SCRIPTS -->
-<script type="text/javascript" src="js/app1.js">
+<script type="text/javascript" src="{{ asset('js/app1.js') }}">
 </script>
-<script type="text/javascript" src="js/plugins.js">
+<script type="text/javascript" src="{{ asset('js/plugins.js') }}">
 </script>
-<script type="text/javascript" src="js/demo.js">
+<script type="text/javascript" src="{{ asset('js/demo.js') }}">
 </script>
-<script type="text/javascript" src="js/settings.js"></script>
-<script type="text/javascript" src="js/server.js"></script>
-<script type="text/javascript" src="js/vendors/peity/jquery.peity.min.js">
+<script type="text/javascript" src="{{ asset('js/settings.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/server.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/vendors/peity/jquery.peity.min.js') }}">
 </script>
                                             							<script>$(function(){                                
                 $(".peity_donut").peity("donut",{height: "40px", width: "40px", fill: ["#f5836c", "#222b44", "#65b55c", "#e24120", "#ffd934", "#18a3d8"]});
